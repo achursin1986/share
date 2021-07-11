@@ -1,3 +1,7 @@
+
+/* 
+ * Function accounts hysteresis, however here is accounted specific ranges per the task, no margin set and no general approach were implemnted
+ */ 
 unsigned int hysteresis(unsigned int input_percent)
 {
 	static unsigned int percent_previous;
@@ -7,7 +11,7 @@ unsigned int hysteresis(unsigned int input_percent)
                 return -1;
         }
 
-	// hysteresis handling, might be to do in one if statement  
+	/* hysteresis handling, might be to do in one if statement */  
 	if (input_percent < percent_previous) { 
 		if ( input_percent > 10  && input_percent < 15 ) {
 			percent_previous = input_percent;
@@ -29,7 +33,7 @@ unsigned int hysteresis(unsigned int input_percent)
 		
 	}
 	
-	// stable ranges 
+	/* stable ranges */ 
 	if ( input_percent >= 0 && input_percent < 15 ){
 		percent_previous = input_percent;
 		current_level = 0;
