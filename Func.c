@@ -1,6 +1,6 @@
 
 /* 
- * Function accounts hysteresis, however here is accounted specific ranges per the task, no margin set and no general approach were implemnted
+ * Function accounts hysteresis, however here are accounted specific ranges per the task, no margin set and no general approach were implemnted
  */ 
 unsigned int hysteresis(unsigned int input_percent)
 {
